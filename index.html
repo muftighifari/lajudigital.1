@@ -12,11 +12,49 @@
 body{margin:0;background:#EEF1F6}
 html{scroll-behavior:smooth}
 </style>
+<meta name="theme-color" content="#0F1E3C">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:site_name" content="Laju Digital">
+<meta property="og:title" content="Laju Digital - Setup, Kelola, dan Bayar Iklan">
+<meta property="og:description" content="Laju Ads membantu setup dan manajemen iklan di Meta, Google, dan TikTok. Laju Pay mengurus kartu virtual dan pembayarannya.">
+<meta name="twitter:card" content="summary">
+<script>document.documentElement.className='js'</script>
+<style>
+[hidden]{display:none!important}
+[id]{scroll-margin-top:90px}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+.nav{position:sticky;top:0;z-index:50;margin:0 -32px;padding:16px 32px!important;background:rgba(238,241,246,.88);backdrop-filter:blur(10px);transition:box-shadow .2s}
+.nav.scrolled{box-shadow:0 1px 0 #C5CDDD}
+.nav a.on{font-weight:700;text-decoration:underline!important;text-decoration-color:#FF6B35!important;text-decoration-thickness:3px!important;text-underline-offset:6px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:#FF6B35;z-index:100}
+.bar{animation:bar 2.4s ease-in-out infinite alternate}
+@keyframes bar{from{translate:0 -14px}to{translate:0 6px}}
+.tilt{transition:transform .15s ease-out;will-change:transform}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{min-height:44px;padding:0 20px;border:1px solid #C5CDDD;border-radius:999px;background:#fff;color:#0F1E3C;font:inherit;font-size:15px;cursor:pointer}
+.tab[aria-selected=true]{background:#0F1E3C;color:#fff;border-color:#0F1E3C}
+#layanan>div,#cara-kerja [style*="flex: 1 1 180px"]{transition:transform .25s,box-shadow .25s}
+#layanan>div:hover,#cara-kerja [style*="flex: 1 1 180px"]:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(15,30,60,.12)}
+details>summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font-size:18px;font-weight:700}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:"+";font-size:24px;line-height:1;color:#FF6B35;transition:transform .2s}
+details[open]>summary::after{transform:rotate(45deg)}
+#totop{position:fixed;right:20px;bottom:20px;width:48px;height:48px;border:0;border-radius:24px;background:#0F1E3C;color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s;z-index:60}
+#totop.show{opacity:1;pointer-events:auto}
+input[type=range]{width:100%;accent-color:#FF6B35}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #0F1E3C;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}}
+</style>
 </head>
 <body>
+<div id="progress"></div>
+<button id="totop" aria-label="Kembali ke atas">&uarr;</button>
 <div style="box-sizing: border-box; width: 100%; background: #EEF1F6; color: #0F1E3C; font-family: 'Space Grotesk', system-ui, sans-serif">
 <div style="max-width: 1120px; margin: 0 auto; padding: 0 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 72px">
-<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 28px">
+<div class="nav" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; padding-top: 28px">
 <div style="display: flex; align-items: center; gap: 12px">
 <div style="position: relative; width: 36px; height: 36px; border-radius: 10px; background: #0F1E3C; overflow: hidden">
 <div style="position: absolute; left: 8px; bottom: 7px; width: 5px; height: 11px; background: #FF6B35; opacity: 0.4; transform: skewX(-20deg)"></div>
@@ -33,7 +71,7 @@ html{scroll-behavior:smooth}
 <a href="https://wa.me/6281399061809" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0 20px; border-radius: 10px; background: #0F1E3C; color: #FFFFFF; font-size: 15px; min-height: 44px; text-decoration: none">Hubungi Kami</a>
 </div>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div class="reveal" style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 24px">
 <h1 style="margin: 0; font-size: 52px; line-height: 1.1; font-weight: 700">Setup, kelola, dan bayar iklan Anda di satu tempat.</h1>
 <p style="margin: 0; font-size: 18px; line-height: 1.5; color: #3A4560">Laju Ads membantu setup dan manajemen iklan di Meta, Google, dan TikTok. Laju Pay mengurus kartu virtual dan pembayarannya.</p>
@@ -43,10 +81,10 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <div style="flex: 1 1 320px; display: flex; justify-content: center">
-<div style="position: relative; width: 100%; max-width: 380px; height: 240px; box-sizing: border-box; border-radius: 20px; background: #0F1E3C; padding: 24px; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between">
-<div style="position: absolute; top: -20px; right: 56px; width: 18px; height: 120px; background: #FF6B35; transform: skewX(-20deg)"></div>
-<div style="position: absolute; top: -20px; right: 28px; width: 18px; height: 84px; background: #FF6B35; opacity: 0.7; transform: skewX(-20deg)"></div>
-<div style="position: absolute; top: -20px; right: 0; width: 18px; height: 48px; background: #FF6B35; opacity: 0.4; transform: skewX(-20deg)"></div>
+<div class="tilt" id="card" style="position: relative; width: 100%; max-width: 380px; height: 240px; box-sizing: border-box; border-radius: 20px; background: #0F1E3C; padding: 24px; color: #FFFFFF; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between">
+<div class="bar" style="position: absolute; top: -20px; right: 56px; width: 18px; height: 120px; background: #FF6B35; transform: skewX(-20deg)"></div>
+<div class="bar" style="position: absolute; top: -20px; right: 28px; width: 18px; height: 84px; background: #FF6B35; opacity: 0.7; transform: skewX(-20deg)"></div>
+<div class="bar" style="position: absolute; top: -20px; right: 0; width: 18px; height: 48px; background: #FF6B35; opacity: 0.4; transform: skewX(-20deg)"></div>
 <div style="position: relative; display: flex; flex-direction: column; gap: 4px">
 <span style="font-size: 20px; font-weight: 700">Laju Digital</span>
 <span style="font-size: 11px; letter-spacing: 2px; color: #AEB9D1">VIRTUAL DEBIT</span>
@@ -59,7 +97,7 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div>
-<div id="layanan" style="display: flex; flex-wrap: wrap; gap: 24px">
+<div id="layanan" class="reveal" style="display: flex; flex-wrap: wrap; gap: 24px">
 <div style="flex: 1 1 380px; box-sizing: border-box; padding: 32px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 12px">
 <h2 style="margin: 0; font-size: 26px">Laju Ads</h2>
 <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #3A4560">Setup dan manajemen iklan untuk media buyer, agensi, affiliate marketer, dan pebisnis online. Akun tetap milik bisnis Anda.</p>
@@ -71,7 +109,7 @@ html{scroll-behavior:smooth}
 <p style="margin: 0; font-size: 15px; line-height: 1.6">Kartu per klien · Limit dan saldo terpantau · Rekonsiliasi</p>
 </div>
 </div>
-<div id="cara-kerja" style="display: flex; flex-direction: column; gap: 32px">
+<div id="cara-kerja" class="reveal" style="display: flex; flex-direction: column; gap: 32px">
 <h2 style="margin: 0; font-size: 36px">Cara kerja</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 20px">
 <div style="flex: 1 1 180px; box-sizing: border-box; padding: 24px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px"><span style="width: 36px; height: 36px; border-radius: 18px; background: #FF6B35; display: flex; align-items: center; justify-content: center; font-weight: 700">1</span><b>Konsultasi</b><span style="font-size: 15px; line-height: 1.5; color: #3A4560">Ceritakan kebutuhan dan platform iklan Anda.</span></div>
@@ -81,9 +119,10 @@ html{scroll-behavior:smooth}
 <div style="flex: 1 1 180px; box-sizing: border-box; padding: 24px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px"><span style="width: 36px; height: 36px; border-radius: 18px; background: #FF6B35; display: flex; align-items: center; justify-content: center; font-weight: 700">5</span><b>Jalan dan laporan</b><span style="font-size: 15px; line-height: 1.5; color: #3A4560">Iklan berjalan dan Anda menerima laporan rutin.</span></div>
 </div>
 </div>
-<div id="harga" style="display: flex; flex-direction: column; gap: 40px">
+<div id="harga" class="reveal" style="display: flex; flex-direction: column; gap: 40px">
 <h2 style="margin: 0; font-size: 36px">Harga</h2>
-<div style="display: flex; flex-direction: column">
+<div class="tabs" role="tablist"><button class="tab" role="tab" data-t="ads" aria-selected="true">Laju Ads</button><button class="tab" role="tab" data-t="pay" aria-selected="false">Laju Pay</button></div>
+<div id="tab-ads" style="display: flex; flex-direction: column">
 <h3 style="margin: 0 0 12px; font-size: 20px">Laju Ads</h3>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Setup Starter</b><div style="font-size: 15px; color: #3A4560">Akun iklan atas nama bisnis Anda, billing, pixel dasar</div></div><b>Mulai Rp 750.000</b></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Setup Standard</b><div style="font-size: 15px; color: #3A4560">Starter + Business Manager, verifikasi dengan data Anda, struktur kampanye</div></div><b>Mulai Rp 1.500.000</b></div>
@@ -93,7 +132,7 @@ html{scroll-behavior:smooth}
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Audit akun</b><div style="font-size: 15px; color: #3A4560">Review struktur dan kepatuhan kebijakan iklan</div></div><b>Rp 1.000.000</b></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD; border-bottom: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Pelatihan tim</b><div style="font-size: 15px; color: #3A4560">Sesi untuk media buyer dan agensi</div></div><b>Rp 1.500.000 / sesi</b></div>
 </div>
-<div style="display: flex; flex-direction: column">
+<div id="tab-pay" style="display: flex; flex-direction: column">
 <h3 style="margin: 0 0 12px; font-size: 20px">Laju Pay (add-on)</h3>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Aktivasi kartu</b><div style="font-size: 15px; color: #3A4560">KYC dan kartu virtual per klien</div></div><b>Rp 50.000 / kartu</b></div>
 <div style="display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #C5CDDD"><div style="flex: 1 1 300px"><b>Top-up</b><div style="font-size: 15px; color: #3A4560">Isi saldo lewat transfer atau QRIS</div></div><b>2% per top-up</b></div>
@@ -101,7 +140,16 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 <div style="margin-top: -40px; font-size: 14px; color: #3A4560">Harga belum termasuk biaya iklan ke platform dan PPN (jika berlaku).</div>
-<div id="syarat" style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+<div id="kalkulator" class="reveal" style="box-sizing: border-box; padding: 32px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 22px">Hitung estimasi fee Manage</h3>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px">Budget iklan per bulan <b id="spend-v" style="font-size: 22px">Rp 20.000.000</b><input id="spend" type="range" min="5000000" max="100000000" step="1000000" value="20000000"></label>
+<div style="display: flex; flex-wrap: wrap; gap: 16px" aria-live="polite">
+<div style="flex: 1 1 200px; padding: 20px; border-radius: 12px; background: #EEF1F6"><div style="font-size: 14px; color: #3A4560">Manage Basic</div><b id="fee-b" style="font-size: 24px">-</b><span style="font-size: 14px; color: #3A4560"> / bulan</span></div>
+<div style="flex: 1 1 200px; padding: 20px; border-radius: 12px; background: #EEF1F6"><div style="font-size: 14px; color: #3A4560">Manage Growth</div><b id="fee-g" style="font-size: 24px">-</b><span style="font-size: 14px; color: #3A4560"> / bulan</span></div>
+</div>
+<div style="font-size: 14px; color: #3A4560">Berlaku yang lebih besar antara tarif flat dan 15% dari budget iklan. Estimasi, belum termasuk PPN.</div>
+</div>
+<div id="syarat" class="reveal" style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 16px">
 <h2 style="margin: 0; font-size: 28px">Syarat layanan</h2>
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.5; color: #3A4560">
 <li>Akun iklan dan aset dimiliki klien, atas nama bisnis klien sendiri.</li>
@@ -110,28 +158,28 @@ html{scroll-behavior:smooth}
 <li>Biaya iklan dibayar klien ke platform atau lewat kartu mereka, terpisah dari fee layanan.</li>
 </ul>
 </div>
-<div id="faq" style="display: flex; flex-direction: column; gap: 24px">
+<div id="faq" class="reveal" style="display: flex; flex-direction: column; gap: 24px">
 <h2 style="margin: 0; font-size: 36px">Pertanyaan umum</h2>
 <div style="display: flex; flex-direction: column">
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD"><b style="font-size: 18px">Siapa pemilik akun iklannya?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Akun iklan dan aset dibuat atas nama bisnis Anda dan dimiliki Anda. Kami masuk sebagai admin atau partner.</div></div>
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD"><b style="font-size: 18px">Berapa lama proses setup?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Umumnya 2-3 hari kerja setelah dokumen dan akses lengkap, tergantung paket.</div></div>
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD"><b style="font-size: 18px">Bagaimana kalau akun dibatasi platform?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Keputusan akhir ada di platform. Kami membantu proses banding lewat prosedur resmi, tetapi tidak dapat menjamin hasilnya.</div></div>
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD"><b style="font-size: 18px">Bagaimana cara top-up Laju Pay?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Isi saldo lewat transfer atau QRIS ke kartu virtual Anda. [Jelaskan mitra penerbit kartu dan pengelolaan dana sesuai kontrak.]</div></div>
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD"><b style="font-size: 18px">Apakah ada biaya tambahan?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Biaya iklan dibayar ke platform, terpisah dari fee layanan. Produksi kreatif dan PPN (jika berlaku) dihitung terpisah.</div></div>
-<div style="padding: 20px 0; border-top: 1px solid #C5CDDD; border-bottom: 1px solid #C5CDDD"><b style="font-size: 18px">Iklan apa yang tidak kami layani?</b><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Judi online, pinjol ilegal, penipuan, produk ilegal, dan kategori lain yang dilarang oleh platform atau hukum.</div></div>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD"><summary>Siapa pemilik akun iklannya?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Akun iklan dan aset dibuat atas nama bisnis Anda dan dimiliki Anda. Kami masuk sebagai admin atau partner.</div></details>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD"><summary>Berapa lama proses setup?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Umumnya 2-3 hari kerja setelah dokumen dan akses lengkap, tergantung paket.</div></details>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD"><summary>Bagaimana kalau akun dibatasi platform?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Keputusan akhir ada di platform. Kami membantu proses banding lewat prosedur resmi, tetapi tidak dapat menjamin hasilnya.</div></details>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD"><summary>Bagaimana cara top-up Laju Pay?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Isi saldo lewat transfer atau QRIS ke kartu virtual Anda. [Jelaskan mitra penerbit kartu dan pengelolaan dana sesuai kontrak.]</div></details>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD"><summary>Apakah ada biaya tambahan?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Biaya iklan dibayar ke platform, terpisah dari fee layanan. Produksi kreatif dan PPN (jika berlaku) dihitung terpisah.</div></details>
+<details style="padding: 20px 0; border-top: 1px solid #C5CDDD; border-bottom: 1px solid #C5CDDD"><summary>Iklan apa yang tidak kami layani?</summary><div style="margin-top: 8px; font-size: 15px; line-height: 1.5; color: #3A4560">Judi online, pinjol ilegal, penipuan, produk ilegal, dan kategori lain yang dilarang oleh platform atau hukum.</div></details>
 </div>
 </div>
-<div id="konsultasi" style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 24px">
+<div id="konsultasi" class="reveal" style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #FFFFFF; display: flex; flex-direction: column; gap: 24px">
 <h2 style="margin: 0; font-size: 28px">Form konsultasi</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 16px">
-<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Nama<input type="text" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
-<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Nomor WhatsApp<input type="text" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
-<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Platform iklan<select style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; background: #FFFFFF; color: #0F1E3C; font: inherit; font-size: 15px"><option>Meta Ads</option><option>Google Ads</option><option>TikTok Ads</option></select></label>
-<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Estimasi budget iklan per bulan<input type="text" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Nama<input id="f-nama" type="text" autocomplete="name" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Nomor WhatsApp<input id="f-wa" type="tel" autocomplete="tel" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Platform iklan<select id="f-platform" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; background: #FFFFFF; color: #0F1E3C; font: inherit; font-size: 15px"><option>Meta Ads</option><option>Google Ads</option><option>TikTok Ads</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; font-size: 14px">Estimasi budget iklan per bulan<input id="f-budget" type="text" placeholder="Contoh: Rp 10.000.000" style="box-sizing: border-box; min-height: 44px; padding: 10px 12px; border: 1px solid #6B7893; border-radius: 10px; font: inherit; font-size: 15px"></label>
 </div>
-<div><button style="padding: 14px 28px; border: 0; border-radius: 12px; background: #FF6B35; color: #0F1E3C; font: inherit; font-size: 16px; font-weight: 700; min-height: 48px">Kirim</button></div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center"><button id="f-kirim" style="padding: 14px 28px; border: 0; border-radius: 12px; background: #FF6B35; color: #0F1E3C; font: inherit; font-size: 16px; font-weight: 700; min-height: 48px">Kirim via WhatsApp</button><span id="f-status" role="status" style="font-size: 14px; color: #3A4560"></span></div>
 </div>
-<div style="box-sizing: border-box; padding: 48px; border-radius: 24px; background: #0F1E3C; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
+<div class="reveal" style="box-sizing: border-box; padding: 48px; border-radius: 24px; background: #0F1E3C; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between">
 <h2 style="margin: 0; font-size: 32px; max-width: 560px; line-height: 1.2">Siap menjalankan iklan? Hubungi kami lewat WhatsApp.</h2>
 <a href="https://wa.me/6281399061809" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; padding: 0 28px; border-radius: 12px; background: #FF6B35; color: #0F1E3C; font-size: 16px; font-weight: 700; min-height: 48px; text-decoration: none">Hubungi via WhatsApp</a>
 </div>
@@ -142,5 +190,35 @@ html{scroll-behavior:smooth}
 </div>
 </div>
 </div>
+<script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var bar=$('progress'),nav=document.querySelector('.nav'),up=$('totop');
+var links=[].slice.call(document.querySelectorAll('.nav a[href^="#"]'));
+function onScroll(){var e=document.documentElement,m=e.scrollHeight-e.clientHeight;bar.style.width=(m>0?e.scrollTop/m*100:0)+'%';nav.classList.toggle('scrolled',e.scrollTop>10);up.classList.toggle('show',e.scrollTop>600)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+up.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+links.forEach(function(a){var s=document.querySelector(a.getAttribute('href'));if(s)so.observe(s)});
+var card=$('card');
+if(card&&matchMedia('(hover:hover)').matches){var w=card.parentElement;
+w.addEventListener('mousemove',function(e){var r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform='perspective(800px) rotateY('+x*14+'deg) rotateX('+(-y*14)+'deg)'});
+w.addEventListener('mouseleave',function(){card.style.transform=''})}
+var tabs=[].slice.call(document.querySelectorAll('.tab'));
+$('tab-pay').hidden=true;
+tabs.forEach(function(t){t.onclick=function(){tabs.forEach(function(x){x.setAttribute('aria-selected',x===t)});$('tab-ads').hidden=t.dataset.t!=='ads';$('tab-pay').hidden=t.dataset.t!=='pay'}});
+var sp=$('spend'),rp=function(n){return 'Rp '+Math.round(n).toLocaleString('id-ID')};
+function calc(){var v=+sp.value;$('spend-v').textContent=rp(v);$('fee-b').textContent=rp(Math.max(2000000,v*.15));$('fee-g').textContent=rp(Math.max(4500000,v*.15))}
+sp.oninput=calc;calc();
+$('f-kirim').onclick=function(){
+var g=function(i){return $(i).value.trim()},st=$('f-status'),n=g('f-nama'),w=g('f-wa'),p=g('f-platform'),b=g('f-budget');
+if(!n||!w){st.textContent='Mohon isi nama dan nomor WhatsApp.';return}
+st.textContent='Membuka WhatsApp...';
+var t='Halo Laju Digital, saya '+n+' ('+w+'). Saya ingin konsultasi iklan '+p+(b?', estimasi budget '+b+' per bulan.':'.');
+window.open('https://wa.me/6281399061809?text='+encodeURIComponent(t),'_blank','noopener')};
+})();
+</script>
 </body>
 </html>
